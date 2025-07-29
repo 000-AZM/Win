@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Social Feed</title>
+  <title>Xinn Social</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Social Feed</h2>
-  <textarea id="postText" placeholder="What's on your mind?"></textarea>
-  <input type="file" id="postImage">
-  <button onclick="createPost()">Post</button>
+  <div class="navbar">
+    <h1>Xinn Social</h1>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div class="post-form">
+    <textarea id="postText" placeholder="What's on your mind?"></textarea>
+    <input type="file" id="postImage">
+    <button onclick="createPost()">Post</button>
+  </div>
 
   <div id="posts"></div>
 
