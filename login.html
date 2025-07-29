@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body>
+  <h2>Login</h2>
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <script type="module">
+    import { auth } from './firebase-config.js';
+    import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    window.login = async () => {
+      const email = email.value;
+      const password = password.value;
+      await signInWithEmailAndPassword(auth, email, password);
+      alert("Logged in!");
+      location.href = 'index.html';
+    };
+  </script>
+</body>
+</html>
